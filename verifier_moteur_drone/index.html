@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#verifier" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -849,6 +854,18 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Vérifier
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -859,6 +876,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ VÉRIFIER
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ VÉRIFIER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-des-bobines-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Test des bobines – résistance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-frequence-de-coupure-filtre-rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Test fréquence de coupure – filtre RL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesure-inductance-dephasage" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Mesure inductance &amp; déphasage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation-pwm-psim" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Simulation PWM (PSIM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brasure-fin-de-cablage-stator" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Brasure &amp; fin de câblage stator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bilan-personnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Bilan personnel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-utilisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      📎 Ressources utilisées
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1167,17 +1279,83 @@
 
   <h1>Vérifier</h1>
 
-<h3>✅ Vérification et optimisation avant fabrication</h3>
-
-<p>Avant impression 3D et assemblage, j'ai vérifié :</p>
+<h2 id="verifier">✅ VÉRIFIER</h2>
+<h3 id="test-des-bobines-resistance">🔌 Test des bobines – résistance</h3>
+<p>🎓 Compétence : <strong>C2a</strong><br />
+🧠 Apprentissage critique : Mesurer et interpréter des résultats physiques.<br />
+📚 Matières : <strong>Électronique</strong>, <strong>Physique</strong></p>
 <ul>
-  <li><strong>Les dimensions et l’ajustement des pièces</strong> pour éviter les erreurs de fabrication.</li>
-  <li><strong>Les interférences entre composants</strong> grâce à la simulation SolidWorks.</li>
-  <li><strong>L’équilibrage du rotor</strong> pour éviter les vibrations excessives.</li>
+<li>Utilisation d’un multimètre pour mesurer :</li>
+<li>Résistance fil test : <strong>0,30 Ω</strong></li>
+<li>Résistance bobine : <strong>0,12–0,13 Ω</strong></li>
+<li>Contrôle qualité des bobines par validation ohmique.</li>
 </ul>
-
-<p>📌 <strong>Exemple de test d’assemblage :</strong></p>
-<p><img src="images/solidworks-verif.png" alt="Assemblage drone SolidWorks" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></p>
+<p>📌 <strong>Image à insérer</strong> : Multimètre branché sur une bobine<br />
+<strong>Commentaire</strong> : Confirme que le bobinage est homogène et exploitable pour la suite.</p>
+<hr />
+<h3 id="test-frequence-de-coupure-filtre-rl">📈 Test fréquence de coupure – filtre RL</h3>
+<p>🎓 Compétence : <strong>C2b</strong><br />
+🧠 Apprentissage critique : Déterminer une fréquence de coupure réelle.<br />
+📚 Matières : <strong>Électricité</strong>, <strong>Physique appliquée</strong></p>
+<ul>
+<li>Signal d’entrée : 1 V crête</li>
+<li>Fréquence à -3dB : <strong>477 kHz</strong></li>
+<li>Comparaison des valeurs théoriques et mesurées</li>
+</ul>
+<p>📌 <strong>Image à insérer</strong> : Oscilloscope affichant Vout = 0.707 Vin<br />
+<strong>Commentaire</strong> : Valide que le filtre RL réalisé fonctionne conformément à la théorie.</p>
+<hr />
+<h3 id="mesure-inductance-dephasage">🧪 Mesure inductance &amp; déphasage</h3>
+<p>🎓 Compétence : <strong>C2a</strong>, <strong>C2b</strong><br />
+🧠 Apprentissage critique : Analyser un comportement réel vs théorique<br />
+📚 Matières : <strong>Électricité</strong>, <strong>Électronique</strong></p>
+<ul>
+<li>Inductances mesurées proches des <strong>8 μH</strong> attendus.</li>
+<li>Test de <strong>déphasage des phases</strong> sur oscilloscope :</li>
+<li>Résultat attendu : <strong>120°</strong></li>
+<li>Résultat mesuré : <strong>~60°</strong>, diagnostic engagé</li>
+</ul>
+<p>📌 <strong>Image à insérer</strong> : Oscillogramme affichant 3 tensions déphasées<br />
+<strong>Commentaire</strong> : Ce test permet de vérifier si les phases du moteur sont correctement alimentées pour assurer une rotation stable.</p>
+<hr />
+<h3 id="simulation-pwm-psim">🧪 Simulation PWM (PSIM)</h3>
+<p>🎓 Compétence : <strong>C2c</strong><br />
+🧠 Apprentissage critique : Identifier les écarts et simuler les corrections<br />
+📚 Matière : <strong>Informatique industrielle</strong>, <strong>Simulation</strong></p>
+<ul>
+<li>Simulation d’un <strong>ondulateur</strong> pour ajuster la <strong>modulation de largeur d’impulsion (PWM)</strong></li>
+<li>Mesure du rapport cyclique</li>
+<li>Évaluation du comportement sous différents signaux d'entrée</li>
+</ul>
+<p>📌 <strong>Image à insérer</strong> : Capture du montage PSIM avec sinus + PWM<br />
+<strong>Commentaire</strong> : Permet de tester virtuellement les corrections avant mise en œuvre matérielle.</p>
+<hr />
+<h3 id="brasure-fin-de-cablage-stator">🔧 Brasure &amp; fin de câblage stator</h3>
+<p>🎓 Compétence : <strong>C2c</strong><br />
+🧠 Apprentissage critique : Corriger un problème de câblage en respectant les normes<br />
+📚 Matières : <strong>Méthodologie</strong>, <strong>Électronique</strong></p>
+<ul>
+<li>Brasure minutieuse de la <strong>DB15</strong> malgré espace réduit</li>
+<li>Tests sur fils plastiques avant soudure finale</li>
+<li>Solution apportée : souder un fil d'étain sur la bobine pour plus de précision</li>
+</ul>
+<p>📌 <strong>Image à insérer</strong> : Photo du DB15 ou bobine brasée<br />
+<strong>Commentaire</strong> : Illustre l'adaptabilité et la rigueur dans la phase finale de fabrication.</p>
+<hr />
+<h2 id="bilan-personnel">🎓 Bilan personnel</h2>
+<blockquote>
+<p>Ce projet m’a permis de <strong>développer une approche complète du prototypage d’un moteur électrique</strong> : modélisation, fabrication, test et amélioration.<br />
+J’ai renforcé ma capacité à travailler <strong>précisément</strong>, à <strong>analyser des écarts</strong>, et à <strong>résoudre des problèmes techniques</strong>.<br />
+La phase de vérification, notamment les tests d’oscilloscope, m’a permis de mieux comprendre les effets physiques réels.</p>
+</blockquote>
+<hr />
+<h2 id="ressources-utilisees">📎 Ressources utilisées</h2>
+<ul>
+<li><strong>SolidWorks</strong> – Modélisation CAO</li>
+<li><strong>Multimètre / Oscilloscope</strong> – Tests bobines et signaux</li>
+<li><strong>PSIM</strong> – Simulation PWM</li>
+<li><strong>Datasheets aimants &amp; fils</strong> – Spécifications matériaux</li>
+</ul>
 
 
 

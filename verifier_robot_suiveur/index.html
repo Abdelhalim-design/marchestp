@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sae-s1-robot-suiveur-de-ligne-partie-verifier" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -699,6 +704,20 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Vérifier
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -710,6 +729,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectif-de-cette-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objectif de cette page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-materiels-apres-soudure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Tests matériels après soudure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostic-de-pannes-specifiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Diagnostic de pannes spécifiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-du-programme-embarque" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Vérification du programme embarqué
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimisation-des-performances" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Optimisation des performances
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultats-obtenus" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Résultats obtenus
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1165,9 +1257,90 @@
 
 
 
-  <h1>Vérifier</h1>
-
-
+<h1 id="sae-s1-robot-suiveur-de-ligne-partie-verifier">🔍 SAE S1 – Robot Suiveur de Ligne : Partie VÉRIFIER</h1>
+<h2 id="objectif-de-cette-page">🎯 Objectif de cette page</h2>
+<p>Cette page décrit toutes les actions de <strong>vérification, test, correction et amélioration</strong> réalisées sur le robot HC-LineBoT. Elle correspond à la validation de la <strong>compétence C2</strong> du BUT GEII.</p>
+<hr />
+<h2 id="tests-materiels-apres-soudure">🧪 Tests matériels après soudure</h2>
+<p>Une fois la carte fabriquée, nous avons réalisé une série de vérifications :
+<img alt="alt text" src="../images/sae%20robot/test_tableau.png" /></p>
+<ul>
+<li>
+<p><strong>Tests de continuité et tension</strong> avec un multimètre</p>
+</li>
+<li>
+<p>Contrôle de la polarité des LEDs, de la tension d’alimentation</p>
+</li>
+<li>Vérification de la présence de court-circuit</li>
+</ul>
+<blockquote>
+<p>🔧 Nous avons détecté un <strong>court-circuit causé par une soudure trop épaisse</strong>, et l’avons corrigé manuellement.</p>
+</blockquote>
+<p><img alt="alt text" src="../images/sae%20robot/soudure_lier.png" /></p>
+<p>🎓 <strong>Compétence C2a :</strong> Identifier un dysfonctionnement<br />
+📚 <strong>Matières :</strong> Électronique, Physique appliquée</p>
+<hr />
+<h2 id="diagnostic-de-pannes-specifiques">⚠️ Diagnostic de pannes spécifiques</h2>
+<p>Plusieurs problèmes ont été identifiés :</p>
+<ul>
+<li><strong>Potentiomètre mal choisi</strong> (20kΩ au lieu de 10kΩ)</li>
+<li><strong>Capteur IR trop haut</strong> : ne détectait pas la ligne</li>
+<li>Résistance mal dimensionnée → LEDs trop faibles</li>
+</ul>
+<p><img alt="alt text" src="../images/sae%20robot/probleme_capteur.jpg" /></p>
+<p>Chaque défaut a été corrigé avec un raisonnement basé sur les mesures et les données techniques.</p>
+<p>🎓 <strong>Compétence C2c :</strong> Corriger une solution technique<br />
+📚 <strong>Matières :</strong> Mathématiques, Physique, Anglais technique (datasheets)</p>
+<hr />
+<h2 id="verification-du-programme-embarque">🧠 Vérification du programme embarqué</h2>
+<p>En testant le robot :</p>
+<ul>
+<li>Les capteurs IR étaient mal calibrés → mauvaise détection</li>
+<li>Les LEDs ne réagissaient pas correctement</li>
+<li>Le robot tournait trop au lieu de 360°</li>
+</ul>
+<p>Nous avons modifié les seuils, ajusté les temporisations, et corrigé les routines.</p>
+<p>🎓 <strong>Compétence C2b :</strong> Tester une solution logicielle<br />
+📚 <strong>Matières :</strong> Informatique, Automatisme</p>
+<hr />
+<h2 id="optimisation-des-performances">🚀 Optimisation des performances</h2>
+<p>Nous avons mesuré et comparé plusieurs essais :</p>
+<ul>
+<li>Ajustement de l’écartement entre capteurs : <strong>1,8 cm</strong> (égale à la largeur de ligne)</li>
+<li>Réduction de l’oscillation du robot</li>
+<li>Calibration précise du temps de rotation pour obtenir un <strong>360° fluide</strong></li>
+</ul>
+<p>🎓 <strong>Compétence C2b / C2c</strong> : Vérifier la conformité et ajuster les performances<br />
+📚 <strong>Matières :</strong> Mathématiques, Informatique, Automatisme</p>
+<hr />
+<h2 id="resultats-obtenus">✅ Résultats obtenus</h2>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temps de course</td>
+<td>✅ 13,62 secondes</td>
+</tr>
+<tr>
+<td>Bonus 360°</td>
+<td>✅ Réalisé avec précision</td>
+</tr>
+<tr>
+<td>Stabilité du robot</td>
+<td>✅ Trajectoire fluide</td>
+</tr>
+<tr>
+<td>Objectifs du cahier des charges</td>
+<td>✅ Tous atteints</td>
+</tr>
+</tbody>
+</table>
+<hr />
 
 
 

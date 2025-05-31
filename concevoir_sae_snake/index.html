@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#portfolio-sae-projet-gameboy-but-geii-1ere-annee" class="md-skip">
+        <a href="#portfolio-sae-arkanoid-but-geii-1ere-annee" class="md-skip">
           Skip to content
         </a>
       
@@ -978,18 +978,37 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#outils-utilises" class="md-nav__link">
+  <a href="#contexte" class="md-nav__link">
     <span class="md-ellipsis">
-      🛠️ Outils utilisés :
+      🔸 Contexte
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cahier-des-charges" class="md-nav__link">
+  <a href="#activites-realisees" class="md-nav__link">
     <span class="md-ellipsis">
-      📋 Cahier des charges
+      🔸 Activités réalisées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔸 Activités réalisées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cahier-des-charges-et-planification" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Cahier des charges et planification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conception-mecanique-solidworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Conception mécanique (SolidWorks)
     </span>
   </a>
   
@@ -999,6 +1018,38 @@
   <a href="#conception-electronique-kicad" class="md-nav__link">
     <span class="md-ellipsis">
       🧩 Conception électronique (KiCad)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmation-mplab-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Programmation (MPLAB X)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemes-rencontres-et-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Problèmes rencontrés et solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competences-developpees" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏆 Compétences développées
     </span>
   </a>
   
@@ -1245,62 +1296,97 @@
 
 
 
-<h1 id="portfolio-sae-projet-gameboy-but-geii-1ere-annee">📚 Portfolio SAE : Projet GameBoy - BUT GEII 1ère Année</h1>
-<hr />
+<h1 id="portfolio-sae-arkanoid-but-geii-1ere-annee">📚 Portfolio SAE Arkanoid – BUT GEII 1ère Année</h1>
 <h2 id="competence-concevoir">🔹 Compétence : Concevoir</h2>
-<h3 id="outils-utilises">🛠️ Outils utilisés :</h3>
+<h3 id="contexte">🔸 Contexte</h3>
+<p>Initialement, notre projet consistait à réaliser une borne d’arcade miniature, mais après analyse des contraintes (transport, esthétique et complexité), nous avons pivoté vers une console portable inspirée de la Game Boy.</p>
+<h3 id="activites-realisees">🔸 Activités réalisées</h3>
+<h4 id="cahier-des-charges-et-planification">📋 Cahier des charges et planification</h4>
 <ul>
-<li><strong>KiCad</strong> : Conception du circuit imprimé (PCB)</li>
-<li><strong>SolidWorks</strong> : Modélisation 3D du boîtier</li>
+<li>Analyse des besoins réels et adaptation du projet : abandon de la borne d’arcade pour une console portable.</li>
+<li>Rédaction d’un cahier des charges incluant les composants (PIC16F18877, écran TFT), contraintes techniques (taille, budget) et moyens disponibles à l’IUT.</li>
+<li>Utilisation d’un <strong>diagramme de Gantt</strong> pour organiser les tâches et planifier le projet.</li>
+</ul>
+<p><strong>Apprentissage critique :</strong>
+- Adapter un projet aux contraintes techniques et matérielles.
+- Maîtriser la gestion de projet pour assurer le respect des délais.</p>
+<p><strong>Lien avec les matières :</strong>
+- <strong>Communication &amp; PPP</strong> : présentation et argumentation des choix lors des réunions de suivi.
+- <strong>Automatisme &amp; Informatique industrielle</strong> : structuration des tâches et formalisation du cahier des charges.</p>
+<hr />
+<h4 id="conception-mecanique-solidworks">🛠️ Conception mécanique (SolidWorks)</h4>
+<ul>
+<li>Conception 3D du boîtier à partir de croquis papier et de mesures précises (pied à coulisse, datasheet).</li>
+<li>Réajustement des dimensions pour intégrer le PCB prototype.</li>
+<li>Création d’un système de fermeture vissé inspiré des calculatrices (impression 3D plus simple à réaliser).</li>
+</ul>
+<p><strong>Apprentissage critique :</strong>
+- Adapter la conception au fur et à mesure des tests et impressions.
+- Utiliser les itérations d’impression 3D pour corriger les défauts.</p>
+<p><strong>Lien avec les matières :</strong>
+- <strong>Électronique &amp; Systèmes embarqués</strong> : intégration mécanique du PCB.
+- <strong>Mathématiques &amp; Physique appliquée</strong> : calculs de dimensions, utilisation du pied à coulisse.</p>
+<hr />
+<h4 id="conception-electronique-kicad">🧩 Conception électronique (KiCad)</h4>
+<ul>
+<li>Réalisation du schéma électrique complet de la carte son.</li>
+<li>Création des fichiers Gerber et validation auprès du constructeur.</li>
+<li>Résolution d’erreurs de routage (erreurs de fils, problèmes de perçage).</li>
+</ul>
+<p><strong>Apprentissage critique :</strong>
+- Comprendre la chaîne de conception et de validation d’un PCB.
+- Apprendre à gérer les erreurs et les contraintes du fabricant.</p>
+<p><strong>Lien avec les matières :</strong>
+- <strong>Électronique &amp; Systèmes embarqués</strong> : schéma électrique, routage, validation des fichiers Gerber.
+- <strong>Automatisme &amp; Informatique industrielle</strong> : interactions entre le PCB et le microcontrôleur.</p>
+<hr />
+<h4 id="programmation-mplab-x">💻 Programmation (MPLAB X)</h4>
+<ul>
+<li>Programmation en langage C du jeu Arkanoid (affichage des briques, déplacement via boutons poussoirs).</li>
+<li>Intégration des boutons configurés en pull-up.</li>
+<li>Génération de positions aléatoires pour les briques (fonction rand).</li>
+</ul>
+<p><strong>Apprentissage critique :</strong>
+- Transformer un cahier des charges en code fonctionnel.
+- Déboguer des erreurs de compilation et corriger les bugs.</p>
+<p><strong>Lien avec les matières :</strong>
+- <strong>Automatisme &amp; Informatique industrielle</strong> : gestion des entrées/sorties, programmation microcontrôleur.
+- <strong>Mathématiques</strong> : positionnement aléatoire des briques.</p>
+<hr />
+<h3 id="problemes-rencontres-et-solutions">🔎 Problèmes rencontrés et solutions</h3>
+<ul>
+<li>Ajustement des dimensions du boîtier après la première impression 3D.</li>
+<li>Mauvais câblage initial du PCB : correction après analyse du schéma.</li>
+<li>Problème de brasage du PCB (surchauffe, détérioration) : recommencer le brasage.</li>
 </ul>
 <hr />
-<h3 id="cahier-des-charges">📋 Cahier des charges</h3>
-<p>Nous avons commencé par établir un <strong>cahier des charges</strong> détaillé :
-- Choix des composants électroniques (écran TFT, microcontrôleur PIC16F18877, boutons poussoirs…)
-- Contraintes techniques :
-  - Taille compacte du PCB
-  - Ergonomie d’une console portable
-  - Limitation budgétaire
-  - Moyens de fabrication disponibles à l’IUT</p>
-<p><strong>Évolution :</strong>
-- <strong>Projet initial</strong> : mini borne d'arcade.
-- <strong>Projet final</strong> : console type <strong>GameBoy rétro</strong>, mieux adaptée aux contraites.</p>
-<p>📅 <strong>Organisation :</strong>
-- Utilisation d’un <strong>diagramme de Gantt</strong>.
-- Élaboration d’un <strong>devis</strong> prévisionnel.
-- Adaptation continue du cahier des charges selon les contraintes matérielles.</p>
-<hr />
-<h3 id="conception-electronique-kicad">🧩 Conception électronique (KiCad)</h3>
-<ol>
-<li><strong>Schématisation :</strong></li>
-<li>Réalisation du schéma électronique complet.</li>
-<li>
-<p>Association des empreintes.</p>
-</li>
-<li>
-<p><strong>Routage du PCB :</strong></p>
-</li>
-<li>Optimisation de la place sur la carte.</li>
-<li>Ajout de trous pour la fixation.</li>
-<li>Compactage du circuit pour un boîtier plus petit.</li>
-</ol>
-<p>📷 Exemple d'image :</p>
-<blockquote>
-<p><img alt="CARTE SON" src="../images/CARTE%20SON.png" /></p>
-</blockquote>
-<ol>
-<li><strong>Validation fabrication :</strong></li>
-<li>Création des fichiers Gerber, Silscreen et Cutout.</li>
-<li>Envoi aux fabricants pour validation.</li>
-</ol>
-<p>📷 Exemple :</p>
-<blockquote>
-<p><img alt="Validation PCB" src="../images/Capture%20d%27%C3%A9cran%202025-04-19%20170038.png" /></p>
-</blockquote>
-<p>✅ <strong>Lien compétence</strong> :<br />
-- Niveau 2 Concevoir : "Concevoir un système en fiabilisant les solutions proposées."
-- Niveau 3 Concevoir : "Adopter une approche sélective dans ses choix technologiques."</p>
-<hr />
+<h3 id="competences-developpees">🏆 Compétences développées</h3>
+<table>
+<thead>
+<tr>
+<th>Matière</th>
+<th>Compétence développée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automatisme &amp; Informatique industrielle</td>
+<td>Organisation de projet, programmation microcontrôleur</td>
+</tr>
+<tr>
+<td>Électronique &amp; Systèmes embarqués</td>
+<td>Schéma, routage, conception PCB</td>
+</tr>
+<tr>
+<td>Mathématiques &amp; Physique appliquée</td>
+<td>Calculs dimensionnels, ajustements de mesures</td>
+</tr>
+<tr>
+<td>Communication &amp; PPP</td>
+<td>Argumentation, justification technique</td>
+</tr>
+</tbody>
+</table>
 
 
 
