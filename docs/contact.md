@@ -1,13 +1,13 @@
 # 📞 Contact
 
 ## 📧 Email
-✉️ Tu peux me contacter par email : [monemail@example.com](mailto:monemail@example.com)
+✉️ Tu peux me contacter par email : [abdelhalim.zouggagh84@gmail.com](abdelhalim.zouggagh84@gmail.com)
 
 ## 🔗 LinkedIn
-🔗 Retrouve-moi sur [LinkedIn](https://www.linkedin.com/in/monprofil)
+🔗 Retrouve-moi sur [LinkedIn](https://www.linkedin.com/in/abdelhalim-zouggagh-755b85352/)
 
-## 🏫 Adresse
-📍 Mon adresse :  
+## 🏫 Adresse de l'etablissement
+📍 Adresse de l'iut :  
 123 Rue de l'IUT, 30000 Nîmes, France
 
 ## 📱 Téléphone
@@ -15,9 +15,6 @@
 
 ---
 
-## 📝 Formulaire de Contact (si activé)
-Si ton site est hébergé avec GitHub Pages, **MkDocs n'accepte pas les formulaires de base**.  
-Tu peux utiliser [Formspree](https://formspree.io/) pour ajouter un **formulaire de contact**.
 
 
 <canvas id="circuitCanvas"></canvas>

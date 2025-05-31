@@ -1,15 +1,63 @@
 ## 🔹 Compétence : Vérifier
 
-### 🔌 Câblage et premiers tests
+### 🔸 Contexte
+Une fois la conception terminée, il a fallu tester et valider le fonctionnement du projet pour garantir la conformité aux attentes et aux contraintes techniques du cahier des charges.
 
-**Étapes réalisées :**
-- Câblage entre le PIC16F18877 et l’écran TFT basé sur la datasheet.
-- Test de base pour vérifier l'affichage de l’écran.
+### 🔸 Activités réalisées
 
-📷 Exemple de câblage :
-> (À insérer : image câblage et datasheet)
+#### 🧪 Tests du PCB et du câblage
+- Réalisation du test de continuité entre les composants après le brasage.
+- Vérification de l’alimentation correcte de chaque composant.
+- Correction des erreurs (ex. inversion de connecteurs) par débrasure et ressoudage.
+
+**Apprentissage critique :**
+- Savoir vérifier la conformité électrique et mécanique d’un circuit.
+- Identifier et corriger les erreurs de brasage ou de câblage.
+
+**Lien avec les matières :**
+- **Physique appliquée** : tests de continuité, validation des circuits.
+- **Électronique & Systèmes embarqués** : vérification du routage et du câblage.
 
 ---
+
+#### 🖥️ Tests fonctionnels du jeu
+- Vérification de l’affichage (écran rouge, test des formes et des briques).
+- Tests des boutons poussoirs (déplacement du carré, réactivité des entrées).
+- Test final du jeu Arkanoid avec les contrôles intégrés.
+
+**Apprentissage critique :**
+- Vérifier le respect des fonctionnalités définies dans le cahier des charges.
+- Tester le code et ajuster la programmation en fonction des résultats.
+
+**Lien avec les matières :**
+- **Automatisme & Informatique industrielle** : tests fonctionnels, débogage du code.
+- **Mathématiques** : validation des coordonnées et des mouvements du jeu.
+
+---
+
+#### 🧩 Intégration finale
+- Assemblage du PCB et des composants dans le boîtier imprimé.
+- Vérification de la bonne fixation mécanique et de la fermeture vissée.
+- Tests d’utilisation complète (fonctionnement du jeu, commandes, alimentation).
+
+**Apprentissage critique :**
+- Importance de l’intégration mécanique et de l’ergonomie du produit fini.
+- Validation finale de la conformité entre le prototype et les attentes.
+
+**Lien avec les matières :**
+- **Vie d’entreprise** : rigueur dans l’assemblage, respect des délais.
+- **Communication & PPP** : présentation du produit final, démonstration orale.
+
+---
+
+### 🏆 Compétences développées
+| Matière | Compétence développée |
+|---------|------------------------|
+| Physique appliquée | Validation des circuits électriques |
+| Électronique & Systèmes embarqués | Tests de continuité, validation des fonctionnalités |
+| Automatisme & Informatique industrielle | Tests fonctionnels, vérification du code |
+| Communication & PPP | Présentation orale des résultats, argumentation technique |
+
 
 ### 🧪 Tests fonctionnels initiaux
 
@@ -22,15 +70,21 @@ Objectif : Vérifier que l'écran est correctement câblé et fonctionnel.
 🧱 Affichage de formes et briques
 🧪 Test de dessin de briques
 
+<pre><code class="language-c">
 // Code pour afficher une image (brique) aléatoirement sur l'écran
 void main(void) 
 {
     while (1) {
         pos_x = rand() % (240-33);
         pos_y = rand() % (320-32);
+
+    </code></pre>
         for (x = 0; x < 33<h2>Programmation de l'écran TFT</h2>
 
+
+
 <p>Voici le premier test d'affichage d'un écran rouge :</p>
+
 
 <pre><code class="language-c">
 #include "mcc_generated_files/mcc.h"
