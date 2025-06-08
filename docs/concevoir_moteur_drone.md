@@ -243,3 +243,200 @@ Projet réalisé en binôme avec **Clément Durand**, encadré par **M. Talierco
 ---
 
 > 🧪 *Ces résultats expérimentaux valident globalement la qualité du bobinage, avec quelques ajustements nécessaires pour optimiser les performances.*
+
+
+## 🧩 Conception du moteur
+
+### 🛠️ Modélisation 3D avec SolidWorks
+
+Avant toute fabrication, j’ai commencé par **modéliser en 3D les pièces du moteur**. Cette étape permet d’avoir une vue globale du système, de détecter les problèmes d’assemblage et de préparer l’impression 3D.
+
+🎓 **Compétence C1b – Réaliser un prototype**  
+🧠 *Reproduire avec précision les pièces du moteur selon les plans*  
+📚 **CAO, Mécanique**
+
+![Rotor](images/sae%20motorisation%20de%20drone/misen%20plan%20stator.png)  
+*Plan de la pièce du rotor modélisée sous SolidWorks*
+
+![Stator](images/sae%20motorisation%20de%20drone/mise%20en%20plan%20statorpng.png)  
+*Plan du stator, servant de base au bobinage*
+
+---
+
+### 📐 Relevés mécaniques & ajustements
+
+Après impression 3D, j’ai effectué **des relevés réels et comparé aux plans CAO**. Cela m’a permis de voir si les pièces étaient conformes, et de comprendre les écarts de fabrication.
+
+🎓 **Compétence C1a – Analyse fonctionnelle**  
+🧠 *Identifier les écarts entre conception et réalité*  
+📚 **Physique appliquée, Fabrication**
+
+> 📝 *Cela m’a appris à anticiper les tolérances de fabrication et à ajuster mes choix en conséquence.*
+
+---
+
+### 🧲 Montage des aimants et bobinage
+
+Une fois les pièces ajustées, j’ai procédé au **montage des aimants selon leur polarité** et au **bobinage du stator**. Ces deux étapes sont cruciales car elles conditionnent le bon fonctionnement magnétique et électrique du moteur.
+
+🎓 **Compétence C1b**  
+🧠 *Respecter les contraintes physiques et logiques d’un moteur réel*  
+📚 **Électronique, Physique appliquée**
+
+![Aimants](images/sae%20motorisation%20de%20drone/Aiment.png)  
+*Montage des aimants avec respect des polarités*
+
+![Outillage](images/sae%20motorisation%20de%20drone/outillage.jpg)  
+*Outils utilisés pour le montage et la fixation des bobines*
+
+> 📏 *Le bobinage m’a appris à travailler avec rigueur et méthode pour garantir l’équilibre des phases.*
+
+---
+
+## 🧮 Mesures expérimentales
+
+### 🔌 Mesure de la résistance des bobines
+
+Après le bobinage, j’ai mesuré la **résistance des bobines à l’aide d’un multimètre**. Cela permet de vérifier que les spires sont bien en contact et qu’il n’y a pas de court-circuit.
+
+🎓 **Compétence C2a – Tester**  
+🧠 *Valider la qualité du bobinage*  
+📚 **Électronique, TP de mesures**
+
+![Mesure résistance](images/sae%20motorisation%20de%20drone/test%20de%20continuiter.jpg)  
+*Contrôle des bobines avec multimètre*
+
+---
+
+### 📈 Test de fréquence de coupure – filtre RL
+
+J’ai ensuite utilisé un montage RL pour **déterminer la fréquence de coupure réelle** de ma bobine. L’objectif était de comparer le comportement théorique et pratique.
+
+
+
+
+
+🎓 **Compétence C2b – Valider**  
+🧠 *Comparer les valeurs pratiques et théoriques*  
+📚 **Électricité, Physique appliquée**
+
+Filtre passe bas  : *Test de fréquence de coupure sur circuit RL*
+
+![alt text](<images/sae robot/sae motorisation de drone/filtre_passe_bas.jpg>)
+
+
+
+| Bobine | Fréquence de coupure (kHz) | VS à fc (V) |
+|--------|-----------------------------|-------------|
+| L1     | 475                         | 0,71        |
+| L2     | 485                         | 0,70        |
+| L3     | 470                         | 0,71        |
+| L4     | 480                         | 0,70        |
+| L5     | 480                         | 0,71        |
+| L6     | 478                         | 0,70        |
+
+
+
+
+> 🎯 *J’ai appris ici à interpréter un signal mesuré sur oscilloscope et à en tirer des valeurs critiques.*
+
+---
+
+### 🔄 Déphasage & triphasé
+
+Pour valider que le moteur fonctionne bien en triphasé, j’ai observé les **signaux des trois phases à l’oscilloscope**. Cela m’a permis de vérifier le déphasage entre U, V et W.
+
+🎓 **Compétence C2b – Mesurer**  
+🧠 *Analyser les signaux triphasés sur oscilloscope*  
+📚 **Oscilloscope, Électricité**
+
+| Mesure        | Déphasage Théorique (°) | Déphasage Mesuré (°) | Écart (°) |
+|---------------|--------------------------|------------------------|-----------|
+| Phase U → V   | 120                      | 118,5                  | -1,5      |
+| Phase V → W   | 120                      | 121,2                  | +1,2      |
+| Phase W → U   | 120                      | 120,3                  | +0,3      |
+
+
+Visualisation a l'ossilloscope : 
+
+
+![alt text](<images/sae robot/sae motorisation de drone/dephasage 120 degraos.png>)
+
+
+---
+
+### 💻 Simulation PSIM
+
+Avant de mettre le moteur sous tension, j’ai simulé un **ondulateur PWM sous PSIM**. Cela m’a permis de prévoir le comportement de l’alimentation triphasée et d’identifier les erreurs possibles.
+
+🎓 **Compétence C2c – Corriger**  
+🧠 *Valider virtuellement avant mise en œuvre*  
+📚 **Simulation, Informatique industrielle**
+
+
+
+| Montage AOP                                                                                     | Visualisation des signaux                                                                 |
+|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| ![Montage AOP](images/sae%20robot/sae%20motorisation%20de%20drone/IMG_0426.jpg)                 | ![Visualisation signaux](images/sae%20robot/sae%20motorisation%20de%20drone/aop%20champs.jpg) |
+
+
+
+
+> 🧠 *Cette simulation m’a permis de corriger un signal déformé avant de le tester en vrai.*
+
+---
+
+### 🔧 Brasure finale et DB15
+
+Dernière étape : connecter le moteur à l’alimentation via une **brasure fine sur un connecteur DB15**. Cet exercice m’a demandé beaucoup de précision en espace réduit.
+
+![Brasure du db15](<images/sae robot/sae motorisation de drone/Brasure.jpg>)
+
+
+🎓 **Compétence C2c – Corriger un défaut**  
+🧠 *Travailler en espace contraint avec précision*  
+📚 **Électronique, Méthodologie projet**
+
+> 🔩 *J’ai appris à m’adapter aux contraintes physiques de montage et à garantir des connexions fiables.*
+
+---
+
+## ✅ Vérification finale
+
+### 🔎 Montage en étoile validé
+
+Pour finir, j’ai vérifié le **montage des bobines en étoile** et testé les continuités. Cela permet d’assurer que les phases sont bien reliées et équilibrées.
+
+Utilisation du multimettre pour relever la continuiter : 
+
+![alt text](<images/sae robot/sae motorisation de drone/test_continuiter.png>)
+
+
+| Phase | Mesure  | Résultat | Interprétation       |
+|-------|---------|----------|---------------------|
+| U     | U1 – U2 | Bip      | OK                  |
+| V     | V1 – V2 | Bip      | OK                  |
+| W     | W1 – W2 | Bip      | OK                  |
+| U-V   | U1 – V1 | Silence  | Pas de court-circuit|
+
+
+Realisation du montage etoile : 
+
+
+![Montage etoile](<images/sae robot/sae motorisation de drone/montage_etoile.png>)
+
+
+🎓 **Compétence C2a – Vérification électrique**  
+📚 **Méthodologie, TP Élen**
+
+> ✔️ *Le moteur est prêt à être alimenté de manière sécurisée et stable.*
+
+---
+
+## 🧠 Bilan personnel
+
+> Ce projet m’a permis de **concevoir, simuler, fabriquer et tester un moteur électrique fonctionnel**.  
+> J’ai renforcé ma capacité à **travailler avec précision**, à **corriger mes erreurs** et à **mener un projet jusqu’à sa validation finale**.  
+> La partie vérification m’a appris à analyser les signaux réels et à comprendre les écarts possibles entre simulation et expérimentation.
+
+---

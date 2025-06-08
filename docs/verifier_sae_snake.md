@@ -9,14 +9,59 @@ Une fois la conception terminée, il a fallu tester et valider le fonctionnement
 - Réalisation du test de continuité entre les composants après le brasage.
 - Vérification de l’alimentation correcte de chaque composant.
 - Correction des erreurs (ex. inversion de connecteurs) par débrasure et ressoudage.
+- Test final sur mplabx 
+
+Teste de continuiter : 
+
+![Image du test de continuiter](<images/Sae snake/Test_de_continuiter.png>)
+
+
+correction de probleme : 
+
+
+
+Probleme rencontrer = faux contact avec les connectique 
+
+
+solution mise en oevre et rebraser 
+
+
+
+
+Test finale sur mplabx pour tester le son : 
+
+
+#include "mcc_generated_files/mcc.h"
+int music[12]={102,108,115,121,129,136,145,153,162,172,182,193};
+
+static int i=0;
+void main(void)
+{
+    // initialize the device
+    SYSTEM_Initialize();
+
+
+    while (1)
+    {
+        // Add your application code
+    if (i>12)
+        i=0;
+    i++;
+    NCO1INC = ((5 + music[i] * 1.28)/4);
+    __delay_ms(200);    
+    }
+}
+
+
+
 
 **Apprentissage critique :**
 - Savoir vérifier la conformité électrique et mécanique d’un circuit.
 - Identifier et corriger les erreurs de brasage ou de câblage.
 
 **Lien avec les matières :**
-- **Physique appliquée** : tests de continuité, validation des circuits.
-- **Électronique & Systèmes embarqués** : vérification du routage et du câblage.
+- **Energie , Electronique** : tests de continuité, validation des circuits.
+- **Informatique & Systèmes embarqués** : vérification du routage et du câblage.
 
 ---
 
@@ -34,6 +79,29 @@ Une fois la conception terminée, il a fallu tester et valider le fonctionnement
 - **Mathématiques** : validation des coordonnées et des mouvements du jeu.
 
 ---
+
+#### 🛠️ Débogage du projet et problème de compilation
+
+- Après une mauvaise manipulation, le projet MPLAB X a été supprimé par erreur, ce qui a entraîné la perte du fichier **Makefile** indispensable à la compilation.
+- Impossible de **build** ou d’accéder au **compilateur MCC** sans ce fichier.
+- Récupération manuelle du fichier **Makefile** à partir d’une ancienne sauvegarde.
+- Nécessité de **réinitialiser le projet** dans MPLAB X et de **reconfigurer le build system** pour retrouver une compilation fonctionnelle.
+
+
+![alt text](<images/Sae snake/Capture d'écran 2025-06-03 223950.png>)
+
+![BUILD](<images/Sae snake/Capture d'écran 2025-06-03 222604.png>)
+
+**Apprentissage critique :**
+- Comprendre le rôle du fichier Makefile dans un projet compilé.
+- Savoir récupérer un projet supprimé ou corrompu.
+- Mettre à jour les paramètres de compilation et les configurations dans MPLAB X.
+- Résoudre un blocage lié à l’environnement de développement.
+
+**Lien avec les matières :**
+- **Informatique industrielle** : gestion d’un environnement de développement, build system, makefile, configuration du compilateur.
+- **Gestion de projet / Outils numériques** : prévention des pertes de données, gestion des versions, travail avec des sauvegardes.
+
 
 #### 🧩 Intégration finale
 - Assemblage du PCB et des composants dans le boîtier imprimé.

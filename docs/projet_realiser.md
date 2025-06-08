@@ -4,7 +4,35 @@
 
 Cette page présente des **compétences techniques** que j'ai développées **en dehors du cadre strict de ma formation GEII**, mais qui complètent directement les **apprentissages et compétences acquises** dans les SAE (notamment **Concevoir** et **Vérifier**), ainsi que dans des modules comme **Automatisme**, **Électronique**, **Informatique embarquée** et **Physique appliquée**.
 
----
+
+
+## 🛱️ Diagnostic approfondi sur smartphone en panne
+
+Au fil du temps, j'ai commencé à faire des **réparations de téléphones** en autonomie. Ce n’était plus juste des changements d’écran ou de batterie, mais des **diagnostics électroniques plus poussés**.
+
+### 🔎 Exemple concret : redémarrage automatique après chute
+
+Un téléphone redémarrait toutes les 2 minutes après une chute. J'ai suivi une démarche structurée :
+
+- J'ai analysé les **logs système** pour chercher des erreurs
+- J'ai constaté une **anomalie au niveau du micro d'ambiance**, situé sur la nappe du flash
+- En ouvrant l’appareil, j’ai observé que **la nappe était endommagée** et provoquait un court-circuit
+- Cette nappe étant reliée à la carte mère, cela provoquait un **comportement instable** par sécurité
+
+| Nappe Flash                             | Fichier source                         |
+|-----------------------------------------|----------------------------------------|
+| ![Nappe Flash](images/Nap%20du%20flash.png) | ![Microphone](images/miCRO.png)         |
+
+
+J'ai alors **isolé le composant**, Remplacer la nappe, et le téléphone a **cessé de redémarrer**.
+
+### 🧠 Compétences mobilisées :
+
+- Lire et comprendre des **logs techniques** (informatique)
+- Interpréter des symptômes pour **identifier une panne matérielle**
+- Faire le lien entre **matériel et logiciel**, comme dans un système embarqué
+
+
 
 ## 🔦 Réparation d'écran de télévision (auto-formation)
 
@@ -20,66 +48,70 @@ Dans une démarche personnelle, j'ai réussi à **réparer un écran plat de té
 
 🎓 *Cette intervention m'a permis de mieux comprendre le fonctionnement des interfaces LVDS et d'affichage, en lien direct avec mes cours d'électronique.*
 
----
 
-## 🛱️ Diagnostic approfondi sur smartphone en panne
+## 🚗 Projet personnel – Diagnostic d'une panne électrique automobile
 
-Au fil du temps, j'ai commencé à faire des **réparations de téléphones** en autonomie. Ce n’était plus juste des changements d’écran ou de batterie, mais des **diagnostics électroniques plus poussés**.
+### ❌ Problème rencontré
 
-### 🔎 Exemple concret : redémarrage automatique après chute
-
-Un téléphone redémarrait toutes les 2 minutes après une chute. J'ai suivi une démarche structurée :
-
-- J'ai analysé les **logs système** pour chercher des erreurs
-- J'ai constaté une **anomalie au niveau du micro d'ambiance**, situé sur la nappe du flash
-- En ouvrant l’appareil, j’ai observé que **la nappe était endommagée** et provoquait un court-circuit
-- Cette nappe étant reliée à la carte mère, cela provoquait un **comportement instable** par sécurité
-
-📷 *[Insérer image de la nappe endommagée ici]*
-
-J'ai alors **isolé le composant**, retiré la nappe, et le téléphone a **cessé de redémarrer**.
-
-### 🧠 Compétences mobilisées :
-
-- Lire et comprendre des **logs techniques** (informatique)
-- Interpréter des symptômes pour **identifier une panne matérielle**
-- Faire le lien entre **matériel et logiciel**, comme dans un système embarqué
+Sur ma Peugeot 206, les **feux stop ne s’allumaient plus**. J’avais bien du 12V après le Neiman, mais aucune tension aux bornes des fusibles dédiés aux feux stop. Aucun voyant d’erreur clair au tableau de bord. Il s’agissait donc de localiser et diagnostiquer la panne **sans valise OBD**, uniquement avec des outils simples.
 
 ---
 
-## 🚗 Application des tests électriques à ma voiture
+### 🔎 Démarche technique suivie
 
-Après avoir appris à faire des **tests de tension, de continuité et d’intensité** pendant la SAE (notamment dans la station de pompage), j’ai pu **réutiliser ces compétences** pour diagnostiquer un problème sur les **feux de ma voiture**.
-
-### ❌ Problème rencontré :
-
-Les feux restaient allumés **après le démarrage**, sans raison apparente.
-
-### 💡 Démarche suivie :
-
-- Lecture du **schéma électrique de la voiture**
-- Recherche du lien entre la **position du contact** et l’activation des feux
-- Contrôle des tensions avec un **multimètre** sur les relais, fusibles, interrupteurs
-- Diagnostic final : **relais collé** suite à une surtension
-- Solution : remplacement du relais → feux redevenus fonctionnels
-
-### 🔬 Compétences associées :
-
-- Lecture de **schéma technique** (comme en automatisme)
-- Application des **tests vus en TP** (fusibles, relais, continuité)
-- Résolution d’une **panne réelle avec une démarche logique**
+1. **Lecture du schéma électrique** (recherche sur forums & documentation technique)
+2. **Contrôle des tensions** avec lampe témoin et multimètre sur :
+   - Fusibles F11 et F12
+   - Contacteur de pédale de frein
+   - Relais
+3. **Test du contacteur de frein** en le shuntant avec un trombone (cf. schéma 2 ci-dessous)
+4. **Interprétation des mesures** (tension, continuité, court-circuit)
+5. **Détection d’un relais collé**, probablement à cause d’une surtension
+6. **Remplacement du relais** ➜ feux redevenus pleinement fonctionnels
 
 ---
 
-## 🎓 Liens avec les compétences académiques
+### 🖼️ Schémas utilisés et interprétés
 
-| Activité personnelle         | Compétence GEII | Matières associées                        | SAE liée       |
-|-----------------------------|-----------------|-------------------------------------------|----------------|
-| Réparation d’écran TV       | C1b - C2         | Électronique, Physique, EEA               | SAE S1         |
-| Diagnostic smartphone       | C1b - C2         | Informatique, Électronique, Automatisme   | SAE S1, S2.1   |
-| Panne électrique voiture    | C2               | TP Électrique, Lecture de schémas         | SAE S1, S3.2   |
+#### Schéma 1 – Vue globale du circuit stop avec alimentation, fusible, relais et retour masse
+
+![alt text](images/Experience_personelle.png)
+
+#### Schéma 2 – Tests terrain réalisés avec lampe témoin et contacteur de frein
+
+![alt text](<images/Capture d'écran 2025-06-08 125403.png>)
+
+> 📌 Ces schémas m’ont aidé à **visualiser la position du défaut** : entre Neiman et platine de fusibles. J’ai aussi appris à **tester un contacteur** et identifier une rupture de circuit en aval d’un relais.
 
 ---
+
+### 🎯 Compétences mobilisées
+
+- Lecture et interprétation de **schémas électriques complexes**
+- Utilisation d’un **multimètre, lampe témoin**, tests de continuité et de tension
+- Diagnostic **logique et structuré** d’une panne réelle
+- Connaissances appliquées en **automatismes, électrotechnique et câblage**
+
+---
+
+### 🧠 Liens pédagogiques avec la formation GEII
+
+| Activité personnelle         | Compétence GEII | Matières associées                      | SAE liée       |
+|-----------------------------|-----------------|-----------------------------------------|----------------|
+| Diagnostic panne électrique | C2              | TP Électrotechnique, Lecture de schémas | SAE S1, S3.2   |
+
+> 💬 *Cette expérience m’a permis d’appliquer concrètement des savoirs vus en cours, notamment lors des SAE sur les stations de pompage ou les alimentations électriques.*
+
+---
+
+### 🔁 Retour d’expérience
+
+J’ai compris l’importance :
+- D’utiliser **la bonne méthode de test** (lampe témoin > multimètre pour des mesures fiables)
+- De faire **des mesures par comparaison** (tension attendue vs mesurée)
+- D’anticiper l’impact de **faux contacts ou relais collés**
+- D’avoir une **lecture critique d’un schéma**, même non issu d’un cours
+
 
 ## 🚀 En quoi ces activités m’ont fait progresser ?
 

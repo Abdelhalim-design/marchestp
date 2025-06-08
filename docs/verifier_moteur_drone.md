@@ -1,88 +1,183 @@
-## ✅ VÉRIFIER
+# ✅ VÉRIFICATION FINALE DU MOTEUR
 
-### 🔌 Test des bobines – résistance  
-🎓 Compétence : **C2a**  
-🧠 Apprentissage critique : Mesurer et interpréter des résultats physiques.  
-📚 Matières : **Électronique**, **Physique**
+## 🔌 Test des bobines – Résistance
 
-- Utilisation d’un multimètre pour mesurer :
-  - Résistance fil test : **0,30 Ω**
-  - Résistance bobine : **0,12–0,13 Ω**
-- Contrôle qualité des bobines par validation ohmique.
+🎓 **Compétence : C2a**  
+🧠 *Apprentissage critique* : Mesurer et interpréter des résultats physiques  
+📚 *Matières* : Électronique, Physique
 
-📌 **Image à insérer** : Multimètre branché sur une bobine  
-**Commentaire** : Confirme que le bobinage est homogène et exploitable pour la suite.
+- **Multimètre utilisé** pour mesurer :
+  - Résistance des fils test : **0,30 Ω**
+  - Résistance des bobines : **0,12 – 0,13 Ω**
+- Contrôle qualité par validation ohmique
 
----
+### 🔍 Premier test de continuité (avant assemblage)
 
-### 📈 Test fréquence de coupure – filtre RL  
-🎓 Compétence : **C2b**  
-🧠 Apprentissage critique : Déterminer une fréquence de coupure réelle.  
-📚 Matières : **Électricité**, **Physique appliquée**
+> Multimètre branché sur chaque bobine
 
-- Signal d’entrée : 1 V crête
-- Fréquence à -3dB : **477 kHz**
-- Comparaison des valeurs théoriques et mesurées
+![Test de continuité](images/sae%20robot/sae%20motorisation%20de%20drone/test%20de%20continuiter.jpg)
 
-📌 **Image à insérer** : Oscilloscope affichant Vout = 0.707 Vin  
-**Commentaire** : Valide que le filtre RL réalisé fonctionne conformément à la théorie.
-
----
-
-### 🧪 Mesure inductance & déphasage  
-🎓 Compétence : **C2a**, **C2b**  
-🧠 Apprentissage critique : Analyser un comportement réel vs théorique  
-📚 Matières : **Électricité**, **Électronique**
-
-- Inductances mesurées proches des **8 μH** attendus.
-- Test de **déphasage des phases** sur oscilloscope :
-  - Résultat attendu : **120°**
-  - Résultat mesuré : **~60°**, diagnostic engagé
-
-📌 **Image à insérer** : Oscillogramme affichant 3 tensions déphasées  
-**Commentaire** : Ce test permet de vérifier si les phases du moteur sont correctement alimentées pour assurer une rotation stable.
+| Bobine | Résistance mesurée | Résistance fil test | Résistance réelle |
+|--------|---------------------|----------------------|--------------------|
+| B1     | 0,42 Ω              | 0,30 Ω               | 0,12 Ω             |
+| B2     | 0,43 Ω              | 0,30 Ω               | 0,13 Ω             |
+| B3     | 0,41 Ω              | 0,30 Ω               | 0,11 Ω             |
+| B4     | 0,42 Ω              | 0,30 Ω               | 0,12 Ω             |
+| B5     | 0,43 Ω              | 0,30 Ω               | 0,13 Ω             |
+| B6     | 0,42 Ω              | 0,30 Ω               | 0,12 Ω             |
 
 ---
 
-### 🧪 Simulation PWM (PSIM)  
-🎓 Compétence : **C2c**  
-🧠 Apprentissage critique : Identifier les écarts et simuler les corrections  
-📚 Matière : **Informatique industrielle**, **Simulation**
+### 🔍 Deuxième test de continuité (après assemblage)
 
-- Simulation d’un **ondulateur** pour ajuster la **modulation de largeur d’impulsion (PWM)**
-- Mesure du rapport cyclique
-- Évaluation du comportement sous différents signaux d'entrée
+![Test de continuité assemblé](images/sae%20robot/sae%20motorisation%20de%20drone/test_continuiter.png)
 
-📌 **Image à insérer** : Capture du montage PSIM avec sinus + PWM  
-**Commentaire** : Permet de tester virtuellement les corrections avant mise en œuvre matérielle.
+| Test réalisé         | Points de mesure | Résultat     | Interprétation        | Statut    |
+|----------------------|------------------|--------------|------------------------|-----------|
+| Continuité phase U   | U1 – U2          | Bip continu  | Bobinage intact        | ✅ Conforme  |
+| Continuité phase V   | V1 – V2          | Bip continu  | Bobinage intact        | ✅ Conforme  |
+| Continuité phase W   | W1 – W2          | Bip continu  | Bobinage intact        | ✅ Conforme  |
+| Isolation U-V        | U1 – V1          | Silence      | Pas de court-circuit   | ✅ Conforme  |
+| Isolation V-W        | V1 – W1          | Silence      | Pas de court-circuit   | ✅ Conforme  |
+| Isolation U-W        | U1 – W1          | Silence      | Pas de court-circuit   | ✅ Conforme  |
+
+📝 **Commentaire** :  
+Tests concluants – les bobinages sont homogènes et utilisables.
 
 ---
 
-### 🔧 Brasure & fin de câblage stator  
-🎓 Compétence : **C2c**  
-🧠 Apprentissage critique : Corriger un problème de câblage en respectant les normes  
-📚 Matières : **Méthodologie**, **Électronique**
+## 📉 Test de fréquence de coupure – Filtre RL
 
-- Brasure minutieuse de la **DB15** malgré espace réduit
-- Tests sur fils plastiques avant soudure finale
-- Solution apportée : souder un fil d'étain sur la bobine pour plus de précision
+🎓 **Compétence : C2b**  
+🧠 *Apprentissage critique* : Déterminer la fréquence de coupure réelle  
+📚 *Domaines* : Électricité, Physique appliquée
 
-📌 **Image à insérer** : Photo du DB15 ou bobine brasée  
-**Commentaire** : Illustre l'adaptabilité et la rigueur dans la phase finale de fabrication.
+⚠️ **Erreur initiale** : Filtre **passe-haut** au lieu de **passe-bas**.
+
+![Erreur filtre](images/sae%20robot/sae%20motorisation%20de%20drone/Circuit%20Rl.png)
+
+### ⚙️ Paramètres de test
+
+- Signal d’entrée : **1,0 V crête**
+- Critère de coupure : \( V_{\text{out}} = 0{,}707 \times V_{\text{in}} \)
+- Fréquence mesurée : **477 kHz** (après correction du montage)
+
+📸 *Image à insérer* : Affichage de l’oscilloscope
+
+📝 **Commentaire** :  
+La courbe observée confirme une atténuation de 3 dB à 477 kHz. Résultat conforme à la théorie avec **R = 23,5 Ω** et **L estimée ≈ 7,8 μH**.
+
+---
+
+## 🧪 Mesure de l’inductance & du déphasage
+
+🎓 **Compétences : C2a, C2b**  
+🧠 *Apprentissage critique* : Comparaison réel vs théorique  
+📚 *Domaines* : Électricité, Électronique
+
+### ⚠️ Montage incorrect corrigé
+
+- Filtre passe-haut remplacé par filtre passe-bas
+- Inductance calculée après correction
+
+📷 *Machine de mesure utilisée* :  
+![LCR-mètre](images/sae%20robot/sae%20motorisation%20de%20drone/machine%20Induction.jpg)
+
+| Bobine | Inductance Théorique (µH) | Inductance Mesurée (µH) | Écart (%) |
+|--------|----------------------------|---------------------------|-----------|
+| L1     | 7,8                        | 8,3                       | +6,4      |
+| L2     | 7,8                        | 7,5                       | -3,8      |
+| L3     | 7,8                        | 8,1                       | +3,8      |
+| L4     | 7,8                        | 7,6                       | -2,6      |
+| L5     | 7,8                        | 7,6                       | -2,6      |
+| L6     | 7,8                        | 7,6                       | -2,6      |
+
+---
+
+### 🔄 Analyse du déphasage triphasé
+
+🎯 Objectif : Vérifier **120° de déphasage**
+
+![Déphasage mesuré](images/sae%20robot/sae%20motorisation%20de%20drone/dephasage%20120%20degraos.png)
+
+| Mesure        | Théorique (°) | Mesuré (°) | Écart (°) |
+|---------------|----------------|------------|-----------|
+| Phase U → V   | 120            | 118,5      | -1,5      |
+| Phase V → W   | 120            | 121,2      | +1,2      |
+| Phase W → U   | 120            | 120,3      | +0,3      |
+
+📝 **Commentaire** :  
+Mesures corrigées conformes. Fonctionnement triphasé validé.
+
+---
+
+## 💻 Simulation PSIM – PWM
+
+🎓 **Compétence : C2c**  
+🧠 *Apprentissage critique* : Anticiper erreurs via simulation  
+📚 *Matière* : Informatique industrielle, Simulation
+
+- Ondulateur simulé sous PSIM
+- Étude du rapport cyclique
+- Analyse des signaux d'entrée/sortie
+
+![Montage PSIM](images/sae%20motorisation%20de%20drone/IMG_0426.jpg)  
+![Signaux PSIM](images/sae%20motorisation%20de%20drone/aop%20champs.jpg)
+
+📝 **Commentaire** :  
+Simulation utile pour corriger un signal déformé **avant** tests réels.
+
+---
+
+## 🔧 Brasure & câblage final
+
+🎓 **Compétence : C2c**  
+🧠 *Apprentissage critique* : S’adapter à un environnement contraint  
+📚 *Méthodologie*, *Électronique*
+
+- Brasure sur connecteur **DB15**
+- Espace restreint : fil d’étain utilisé pour précision
+
+![Brasure](images/sae%20robot/sae%20motorisation%20de%20drone/Disfonctionnement_brasage.png)
+
+📝 **Commentaire** :  
+Exercice de précision important en phase finale.
+
+---
+
+## ✅ Vérification finale – Montage étoile
+
+- Test de continuité avec multimètre
+
+![Test final](images/sae%20robot/sae%20motorisation%20de%20drone/test_continuiter.png)
+
+| Phase | Points mesurés | Résultat | Interprétation         |
+|-------|-----------------|----------|------------------------|
+| U     | U1 – U2         | Bip      | OK                     |
+| V     | V1 – V2         | Bip      | OK                     |
+| W     | W1 – W2         | Bip      | OK                     |
+| U-V   | U1 – V1         | Silence  | Pas de court-circuit   |
+
+![Montage étoile](images/sae%20robot/sae%20motorisation%20de%20drone/montage_etoile.png)
+
+🎓 **Compétence : C2a – Vérification électrique**  
+📚 *Méthodologie*, *TP Électronique*
+
+✔️ *Moteur prêt à l’alimentation sécurisée.*
 
 ---
 
 ## 🎓 Bilan personnel
 
-> Ce projet m’a permis de **développer une approche complète du prototypage d’un moteur électrique** : modélisation, fabrication, test et amélioration.  
-> J’ai renforcé ma capacité à travailler **précisément**, à **analyser des écarts**, et à **résoudre des problèmes techniques**.  
-> La phase de vérification, notamment les tests d’oscilloscope, m’a permis de mieux comprendre les effets physiques réels.
+> Ce projet m’a permis de développer une approche complète du **prototypage moteur** : modélisation, fabrication, test et amélioration.  
+> J’ai renforcé ma capacité à travailler avec **précision**, à analyser les écarts, et à résoudre des **problèmes techniques réels**.
 
 ---
 
 ## 📎 Ressources utilisées
 
-- **SolidWorks** – Modélisation CAO
-- **Multimètre / Oscilloscope** – Tests bobines et signaux
-- **PSIM** – Simulation PWM
-- **Datasheets aimants & fils** – Spécifications matériaux
+- **SolidWorks** – Modélisation CAO  
+- **Multimètre / Oscilloscope** – Tests et mesures  
+- **PSIM** – Simulation PWM  
+- **Datasheets aimants & fils** – Caractéristiques techniques  
+
