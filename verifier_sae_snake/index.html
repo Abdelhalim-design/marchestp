@@ -1023,10 +1023,39 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#include-mcc_generated_filesmcch" class="md-nav__link">
+    <span class="md-ellipsis">
+      include "mcc_generated_files/mcc.h"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="include "mcc_generated_files/mcc.h"">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#tests-fonctionnels-du-jeu" class="md-nav__link">
     <span class="md-ellipsis">
       🖥️ Tests fonctionnels du jeu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debogage-du-projet-et-probleme-de-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Débogage du projet et problème de compilation
     </span>
   </a>
   
@@ -1038,11 +1067,6 @@
       🧩 Intégration finale
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1298,8 +1322,6 @@
 
 
 
-  <h1>Vérifier</h1>
-
 <h2 id="competence-verifier">🔹 Compétence : Vérifier</h2>
 <h3 id="contexte">🔸 Contexte</h3>
 <p>Une fois la conception terminée, il a fallu tester et valider le fonctionnement du projet pour garantir la conformité aux attentes et aux contraintes techniques du cahier des charges.</p>
@@ -1309,13 +1331,38 @@
 <li>Réalisation du test de continuité entre les composants après le brasage.</li>
 <li>Vérification de l’alimentation correcte de chaque composant.</li>
 <li>Correction des erreurs (ex. inversion de connecteurs) par débrasure et ressoudage.</li>
+<li>Test final sur mplabx </li>
 </ul>
+<p>Teste de continuiter : </p>
+<p><img alt="Image du test de continuiter" src="../images/Sae%20snake/Test_de_continuiter.png" /></p>
+<p>correction de probleme : </p>
+<p>Probleme rencontrer = faux contact avec les connectique </p>
+<p>solution mise en oevre et rebraser </p>
+<p>Test finale sur mplabx pour tester le son : </p>
+<h1 id="include-mcc_generated_filesmcch">include "mcc_generated_files/mcc.h"</h1>
+<p>int music[12]={102,108,115,121,129,136,145,153,162,172,182,193};</p>
+<p>static int i=0;
+void main(void)
+{
+    // initialize the device
+    SYSTEM_Initialize();</p>
+<pre><code>while (1)
+{
+    // Add your application code
+if (i&gt;12)
+    i=0;
+i++;
+NCO1INC = ((5 + music[i] * 1.28)/4);
+__delay_ms(200);    
+}
+</code></pre>
+<p>}</p>
 <p><strong>Apprentissage critique :</strong>
 - Savoir vérifier la conformité électrique et mécanique d’un circuit.
 - Identifier et corriger les erreurs de brasage ou de câblage.</p>
 <p><strong>Lien avec les matières :</strong>
-- <strong>Physique appliquée</strong> : tests de continuité, validation des circuits.
-- <strong>Électronique &amp; Systèmes embarqués</strong> : vérification du routage et du câblage.</p>
+- <strong>Energie , Electronique</strong> : tests de continuité, validation des circuits.
+- <strong>Informatique &amp; Systèmes embarqués</strong> : vérification du routage et du câblage.</p>
 <hr />
 <h4 id="tests-fonctionnels-du-jeu">🖥️ Tests fonctionnels du jeu</h4>
 <ul>
@@ -1330,6 +1377,23 @@
 - <strong>Automatisme &amp; Informatique industrielle</strong> : tests fonctionnels, débogage du code.
 - <strong>Mathématiques</strong> : validation des coordonnées et des mouvements du jeu.</p>
 <hr />
+<h4 id="debogage-du-projet-et-probleme-de-compilation">🛠️ Débogage du projet et problème de compilation</h4>
+<ul>
+<li>Après une mauvaise manipulation, le projet MPLAB X a été supprimé par erreur, ce qui a entraîné la perte du fichier <strong>Makefile</strong> indispensable à la compilation.</li>
+<li>Impossible de <strong>build</strong> ou d’accéder au <strong>compilateur MCC</strong> sans ce fichier.</li>
+<li>Récupération manuelle du fichier <strong>Makefile</strong> à partir d’une ancienne sauvegarde.</li>
+<li>Nécessité de <strong>réinitialiser le projet</strong> dans MPLAB X et de <strong>reconfigurer le build system</strong> pour retrouver une compilation fonctionnelle.</li>
+</ul>
+<p><img alt="alt text" src="../images/Sae%20snake/Capture%20d%27%C3%A9cran%202025-06-03%20223950.png" /></p>
+<p><img alt="BUILD" src="../images/Sae%20snake/Capture%20d%27%C3%A9cran%202025-06-03%20222604.png" /></p>
+<p><strong>Apprentissage critique :</strong>
+- Comprendre le rôle du fichier Makefile dans un projet compilé.
+- Savoir récupérer un projet supprimé ou corrompu.
+- Mettre à jour les paramètres de compilation et les configurations dans MPLAB X.
+- Résoudre un blocage lié à l’environnement de développement.</p>
+<p><strong>Lien avec les matières :</strong>
+- <strong>Informatique industrielle</strong> : gestion d’un environnement de développement, build system, makefile, configuration du compilateur.
+- <strong>Gestion de projet / Outils numériques</strong> : prévention des pertes de données, gestion des versions, travail avec des sauvegardes.</p>
 <h4 id="integration-finale">🧩 Intégration finale</h4>
 <ul>
 <li>Assemblage du PCB et des composants dans le boîtier imprimé.</li>
