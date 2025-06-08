@@ -1970,7 +1970,7 @@
 - Appliquer la même rigueur que dans mon projet personnel</p>
 </blockquote>
 <p>routage de la carte son : </p>
-<p><img alt="alt text" src="../images/Sae%20snake/CARTE%20SON.png" /></p>
+<p><img alt="alt text" src="../images/Sae%20snake/image.png" /></p>
 <p>et creation de fichier gerber avec les fichier percage...</p>
 <p><img alt="creation de fichier gerber" src="../images/Sae%20snake/Capture%20d%27%C3%A9cran%202025-06-07%20140221.png" /></p>
 <p><img alt="tracer les fichier gerber" src="../images/Sae%20snake/Capture%20d%27%C3%A9cran%202025-06-07%20140238.png" /></p>
@@ -2342,7 +2342,6 @@ Ce code implémente un jeu Arkanoid complet sur microcontrôleur PIC avec écran
 #define BRICK_WIDTH    30
 #define BRICK_HEIGHT   10
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Schéma ou dessin montrant les dimensions sur l'écran</p>
 <p><strong>💡 Explication :</strong>
 - Définition des constantes pour éviter les "nombres magiques"
 - Paramétrage modulaire permettant des ajustements faciles
@@ -2368,7 +2367,6 @@ uint16_t lireJoystickY() {
     return ((uint16_t)ADRESH &lt;&lt; 8) | ADRESL;
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Joystick analogique connecté au microcontrôleur</p>
 <p><strong>💡 Explication :</strong>
 - Configuration des canaux ADC pour lecture joystick 2 axes
 - Gestion des registres de conversion analogique-numérique
@@ -2389,7 +2387,7 @@ void playMenuMusic(void) {
     }
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Haut-parleur/buzzer connecté, oscilloscope montrant signal audio</p>
+<p><img alt="alt text" src="../images/Sae%20snake/IMG_0534.jpg" /></p>
 <p><strong>💡 Explication :</strong>
 - Utilisation du module NCO (Numerically Controlled Oscillator) pour générer des fréquences
 - Tableau de fréquences correspondant aux notes musicales
@@ -2416,7 +2414,6 @@ void drawBorders(void) {
     fillRect(0, 20, SCREEN_WIDTH, 5, ILI9341_BLUE);
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Écran montrant les différentes palettes de couleurs</p>
 <p><strong>💡 Explication :</strong>
 - Système de palettes interchangeables pour personnalisation visuelle
 - Fonctions de dessin optimisées pour l'affichage TFT
@@ -2454,7 +2451,22 @@ void initBricks(void) {
     }
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Écran montrant différents patterns de briques (cœur, damier, etc.)</p>
+<table>
+<thead>
+<tr>
+<th>Image 1</th>
+<th>Image 2</th>
+<th>Image 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Image 1" src="../images/Sae%20snake/IMG_0690.jpg" /></td>
+<td><img alt="Image 2" src="../images/Sae%20snake/IMG_0691.jpg" /></td>
+<td><img alt="alt text" src="../images/Sae%20snake/IMG_0696.jpg" /></td>
+</tr>
+</tbody>
+</table>
 <p><strong>💡 Explication :</strong>
 - Structure de données optimisée pour les briques (position, état, couleur)
 - Algorithmes de génération de motifs variés selon le niveau
@@ -2487,7 +2499,12 @@ void initBricks(void) {
     }
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Séquence montrant la balle rebondissant sur la raquette</p>
+<blockquote>
+<p>Voici le lien vers une video ilustrative : </p>
+</blockquote>
+<ul>
+<li><a href="https://youtube.com/shorts/9vQg8wK_2AU?feature=share">Vidéo 1</a></li>
+</ul>
 <p><strong>💡 Explication :</strong>
 - Implémentation de la physique basique : rebonds, vitesse, direction
 - Détection de collisions rectangulaires optimisée
@@ -2522,7 +2539,12 @@ void initBricks(void) {
     }
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Joystick en action avec raquette se déplaçant à l'écran</p>
+<blockquote>
+<p>Voici le lien vers une video ilustrative : </p>
+</blockquote>
+<ul>
+<li><a href="https://youtube.com/shorts/9vQg8wK_2AU?feature=share">Vidéo 1</a></li>
+</ul>
 <p><strong>💡 Explication :</strong>
 - Conversion des valeurs analogiques en mouvements discrets
 - Gestion des limites d'écran et contraintes physiques
@@ -2553,7 +2575,7 @@ void initBricks(void) {
     }
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Interface montrant score, vies et barre d'énergie</p>
+<p><img alt="alt text" src="../images/Sae%20snake/Vie%20et%20score.png" /></p>
 <p><strong>💡 Explication :</strong>
 - Affichage temps réel des informations de jeu
 - Interface graphique claire avec barres de vie visuelles
@@ -2590,7 +2612,20 @@ void initBricks(void) {
     }
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Menu interactif avec boutons et sélections</p>
+<table>
+<thead>
+<tr>
+<th>Menu</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Menu" src="../images/Sae%20snake/menu.jpg" /></td>
+<td><img alt="Image" src="../images/Sae%20snake/IMG_0693.jpg" /></td>
+</tr>
+</tbody>
+</table>
 <p><strong>💡 Explication :</strong>
 - Menu de configuration complet avec boutons physiques
 - Système de navigation intuitive
@@ -2637,7 +2672,10 @@ void initBricks(void) {
     }
 }
 </code></pre>
-<p><strong>📸 Photo recommandée :</strong> Jeu en cours d'exécution montrant tous les éléments</p>
+<p>Voici le lien vers une video ilustrative : </p>
+<ul>
+<li><a href="https://youtube.com/shorts/vCBqcKI-Fcc?feature=share">Vidéo 2</a></li>
+</ul>
 <p><strong>💡 Explication :</strong>
 - Architecture en machine à états (intro→menu→jeu→fin)
 - Boucle de jeu optimisée à ~60 FPS
