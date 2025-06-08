@@ -1050,48 +1050,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#simulation-psim" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Simulation PSIM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#brasure-finale-et-db15" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Brasure finale et DB15
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verification-finale" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Vérification finale
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="✅ Vérification finale">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#montage-en-etoile-valide" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔎 Montage en étoile validé
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1511,8 +1469,8 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="Rotor" src="images/sae%20motorisation%20de%20drone/misen%20plan%20stator.png" /></td>
-<td><img alt="Stator" src="images/sae%20motorisation%20de%20drone/mise%20en%20plan%20statorpng.png" /></td>
+<td><img alt="alt text" src="../images/sae%20robot/sae%20motorisation%20de%20drone/misen%20plan%20stator.png" /></td>
+<td><img alt="alt text" src="../images/sae%20robot/sae%20motorisation%20de%20drone/mise%20en%20plan%20statorpng.png" /></td>
 </tr>
 </tbody>
 </table>
@@ -1802,88 +1760,6 @@
 </table>
 <p>Visualisation a l'ossilloscope : </p>
 <p><img alt="alt text" src="../images/sae%20robot/sae%20motorisation%20de%20drone/dephasage%20120%20degraos.png" /></p>
-<hr />
-<h3 id="simulation-psim">💻 Simulation PSIM</h3>
-<p>Avant de mettre le moteur sous tension, j’ai simulé un <strong>ondulateur PWM sous PSIM</strong>. Cela m’a permis de prévoir le comportement de l’alimentation triphasée et d’identifier les erreurs possibles.</p>
-<p>🎓 <strong>Compétence C2c – Corriger</strong><br />
-🧠 <em>Valider virtuellement avant mise en œuvre</em><br />
-📚 <strong>Simulation, Informatique industrielle</strong></p>
-<table>
-<thead>
-<tr>
-<th>Montage AOP</th>
-<th>Visualisation des signaux</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="Montage AOP" src="../images/sae%20robot/sae%20motorisation%20de%20drone/IMG_0426.jpg" /></td>
-<td><img alt="Visualisation signaux" src="../images/sae%20robot/sae%20motorisation%20de%20drone/aop%20champs.jpg" /></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>🧠 <em>Cette simulation m’a permis de corriger un signal déformé avant de le tester en vrai.</em></p>
-</blockquote>
-<hr />
-<h3 id="brasure-finale-et-db15">🔧 Brasure finale et DB15</h3>
-<p>Dernière étape : connecter le moteur à l’alimentation via une <strong>brasure fine sur un connecteur DB15</strong>. Cet exercice m’a demandé beaucoup de précision en espace réduit.</p>
-<p><img alt="Brasure du db15" src="../images/sae%20robot/sae%20motorisation%20de%20drone/Brasure.jpg" /></p>
-<p>🎓 <strong>Compétence C2c – Corriger un défaut</strong><br />
-🧠 <em>Travailler en espace contraint avec précision</em><br />
-📚 <strong>Électronique, Méthodologie projet</strong></p>
-<blockquote>
-<p>🔩 <em>J’ai appris à m’adapter aux contraintes physiques de montage et à garantir des connexions fiables.</em></p>
-</blockquote>
-<hr />
-<h2 id="verification-finale">✅ Vérification finale</h2>
-<h3 id="montage-en-etoile-valide">🔎 Montage en étoile validé</h3>
-<p>Pour finir, j’ai vérifié le <strong>montage des bobines en étoile</strong> et testé les continuités. Cela permet d’assurer que les phases sont bien reliées et équilibrées.</p>
-<p>Utilisation du multimettre pour relever la continuiter : </p>
-<p><img alt="alt text" src="../images/sae%20robot/sae%20motorisation%20de%20drone/test_continuiter.png" /></p>
-<table>
-<thead>
-<tr>
-<th>Phase</th>
-<th>Mesure</th>
-<th>Résultat</th>
-<th>Interprétation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>U</td>
-<td>U1 – U2</td>
-<td>Bip</td>
-<td>OK</td>
-</tr>
-<tr>
-<td>V</td>
-<td>V1 – V2</td>
-<td>Bip</td>
-<td>OK</td>
-</tr>
-<tr>
-<td>W</td>
-<td>W1 – W2</td>
-<td>Bip</td>
-<td>OK</td>
-</tr>
-<tr>
-<td>U-V</td>
-<td>U1 – V1</td>
-<td>Silence</td>
-<td>Pas de court-circuit</td>
-</tr>
-</tbody>
-</table>
-<p>Realisation du montage etoile : </p>
-<p><img alt="Montage etoile" src="../images/sae%20robot/sae%20motorisation%20de%20drone/montage_etoile.png" /></p>
-<p>🎓 <strong>Compétence C2a – Vérification électrique</strong><br />
-📚 <strong>Méthodologie, TP Élen</strong></p>
-<blockquote>
-<p>✔️ <em>Le moteur est prêt à être alimenté de manière sécurisée et stable.</em></p>
-</blockquote>
 <hr />
 <h2 id="bilan-personnel">🧠 Bilan personnel</h2>
 <blockquote>
